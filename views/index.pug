@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Boost Up Dance Academy
+        style 
+            include ../static/style.css
+
+    body
+        nav#navbar 
+            ul 
+                div#logo
+                    img(src="../static/img/logo.png")
+                    | BUDA
+                li #[a(href="/") Home] 
+                li #[a(href="/") About] 
+                li #[a(href="/") Services] 
+                li #[a(href="/") Class Info] 
+                li #[a(href="/") Contact Us]
+
+        section#introSection
+            div Welcome to Boost Up Dance Academy
+            div.small Eat Sleep Dance Repeat 
+        
+        section#missionSection
+            h2 Our Mission
+            div.card
+                h3 Dance Perfection
+                div.card-box
+                    div.card-img
+                        img(src="../static/img/img1.png")
+                    div.card-content
+                        p This is the best dance academy of the universe
+
+            div.card
+                h3 Dance the way you like
+                div.card-box
+                    div.card-img
+                        img(src="../static/img/img2.png")
+                    div.card-content
+                        p This is the best dance academy of the universe
+
+            div.card
+                h3 Expert Teaching
+                div.card-box
+                    div.card-img
+                        img(src="../static/img/img3.png")
+                    div.card-content
+                        p This is the best dance academy of the universe
+
+
+        section#sponsorsSection
+            h2 Our Sponsors
+            div#sponsors
+                img(src="../static/img/logo1.png", alt="Sponsor Image")
+                img(src="../static/img/logo2.png", alt="Sponsor Image")
+                img(src="../static/img/logo3.png", alt="Sponsor Image")
+                img(src="../static/img/logo4.png", alt="Sponsor Image")
+
+        footer#footer
+            | Copyright &copy; 2019 BoostAcademy.com | All Rights Reserved
+
+        script 
+            include ../static/index.js
