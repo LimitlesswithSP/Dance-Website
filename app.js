@@ -1,21 +1,18 @@
 const express = require("express");
 const path = require("path");
-const bodyparser = require("body-parser");
+// const bodyparser = require("body-parser");
 
-// Including mongoose in our project and opening a connection
+// Including mongoose in our project and establishing a connection to the contactDance database running on localhost
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/contactDance', { useNewUrlParser: true, useUnifiedTopology: true });
+
+main().catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect('mongodb://localhost:27017/contactDance');
+}
 
 const app = express();
 const port = 8000;
-
-// Establishing the pending connection to the contactDance database running on localhost
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-    // we're connected!
-    // console.log("We are Connected.");
-});
 
 // Initiating a schema with the specific properties
 const contactSchema = new mongoose.Schema({
